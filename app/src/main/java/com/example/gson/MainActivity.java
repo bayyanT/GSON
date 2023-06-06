@@ -34,6 +34,7 @@ public class MainActivity extends AppCompatActivity {
     public void onLoad(View view) {
         SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
         Gson gson =new Gson();
+        /***here update **/
         String x=sharedPreferences.getString("123","");
         Book []books=gson.fromJson(x,Book[].class);
         Toast.makeText(this, "number of books"+books.length, Toast.LENGTH_SHORT).show();
